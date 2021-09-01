@@ -9,9 +9,6 @@ class CommentArea extends Component {
 
   componentDidUpdate = async (prevProps) => {
     if (prevProps.elementId !== this.props.elementId) {
-      console.log("movie has changed!");
-      console.log(prevProps.elementId);
-      console.log(this.props.elementId);
       try {
         let response = await fetch(
           "https://striveschool-api.herokuapp.com/api/comments/" +
@@ -19,7 +16,7 @@ class CommentArea extends Component {
           {
             headers: {
               Authorization:
-                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjZiODJkNTI2MjAwMTViNmRjOTgiLCJpYXQiOjE2MjkyODgxMjAsImV4cCI6MTYzMDQ5NzcyMH0.XfRUnn6BFJPPRnEwvnQnjrk0oaXPSwwKyJlEGV6Wn9k",
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjZiODJkNTI2MjAwMTViNmRjOTgiLCJpYXQiOjE2MzA0OTg4NjcsImV4cCI6MTYzMTcwODQ2N30.Xlu3WYjWXMf6cyePbQR3NwBhGmckpDLvjDdPriJwQ5Q",
             },
           }
         );

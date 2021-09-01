@@ -8,7 +8,7 @@ const Navbar = () => {
       className="navbar sticky-top navbar-expand-lg navbar-dark"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.356)" }}
     >
-      <a className="navbar-brand" href="index.html">
+      <a className="navbar-brand" href="/">
         <img src={netflixLogo} alt="Netflix Logo" height="40px" />
       </a>
       <button
@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="index.html">
+            <a className="nav-link" href="/">
               Home <span className="sr-only">(current)</span>
             </a>
           </li>

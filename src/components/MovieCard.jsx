@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "../style/style.css";
 import CommentArea from "./CommentArea";
+import { withRouter } from "react-router-dom";
 
 class MovieCard extends Component {
   state = {
@@ -22,15 +23,15 @@ class MovieCard extends Component {
             src={this.props.movie.Poster}
             className="card-img-top img-fluid"
             alt="..."
+            onClick={() =>
+              this.props.history.push("/" + this.props.movie.imdbID)
+            }
           />
           <span style={{ display: "none" }}>{this.props.movie.Title}</span>
         </div>
-        {/* {this.state.selected && (
-          <CommentArea elementId={this.props.movie.imdbID}></CommentArea>
-        )} */}
       </div>
     );
   }
 }
 
-export default MovieCard;
+export default withRouter(MovieCard);
